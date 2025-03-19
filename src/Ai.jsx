@@ -5,7 +5,7 @@ import { Modal, Button } from "react-bootstrap";
 import "./App.css";
 
 function App() {
-  const navigate = useNavigate(); // ใช้ useNavigate เพื่อเปลี่ยนหน้า
+  const navigate = useNavigate();
   const [boardSize, setBoardSize] = useState(3);
   const [tempBoardSize, setTempBoardSize] = useState(boardSize);
   const [history, setHistory] = useState([
@@ -20,22 +20,18 @@ function App() {
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState("");
 
-  // ฟังก์ชันคำนวณผู้ชนะ
   const calculateWinner = (squares) => {
     const lines = [];
     const size = boardSize;
 
-    // สร้างเส้นแนวตั้งและแนวนอน
     for (let i = 0; i < size; i++) {
-      lines.push(Array.from({ length: size }, (_, j) => i * size + j)); // แนวนอน
-      lines.push(Array.from({ length: size }, (_, j) => i + j * size)); // แนวตั้ง
+      lines.push(Array.from({ length: size }, (_, j) => i * size + j));
+      lines.push(Array.from({ length: size }, (_, j) => i + j * size));
     }
 
-    // สร้างเส้นทแยงมุม
-    lines.push(Array.from({ length: size }, (_, i) => i * (size + 1))); // ทแยงซ้ายไปขวา
-    lines.push(Array.from({ length: size }, (_, i) => (i + 1) * (size - 1))); // ทแยงขวาไปซ้าย
+    lines.push(Array.from({ length: size }, (_, i) => i * (size + 1)));
+    lines.push(Array.from({ length: size }, (_, i) => (i + 1) * (size - 1)));
 
-    // ตรวจสอบว่ามีผู้ชนะหรือไม่
     for (let line of lines) {
       const firstSymbol = squares[line[0]];
       if (
@@ -180,7 +176,6 @@ function App() {
       }
     }
 
-    // อัปเดต history ด้วยบอร์ดใหม่
     const newHistory = history.slice(0, stepNumber + 1);
     newHistory[stepNumber] = { squares: newSquares, move: current.move };
     setHistory(newHistory);

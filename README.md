@@ -1,12 +1,49 @@
-# React + Vite
+https://github.com/kunaaa123/Game-OX
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+XO Game (Custom Size)
 
-Currently, two official plugins are available:
+📌 Project Overview
+เกม XO ที่ผู้เล่นสามารถปรับขนาดกระดานได้ตามต้องการ พร้อมระบบ AI สำหรับการเล่นกับคอมพิวเตอร์
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🚀 Features
+ปรับขนาดกระดาน (3x3, 4x4, NxN)
+ระบบเก็บประวัติการเล่นและผู้ชนะ
+เลือกสัญลักษณ์ผู้เล่น (X, O)
+AI Bot คู่แข่ง
+เลือกระดับความยากของ AI (ง่าย, กลาง, ยาก)
 
-## Expanding the ESLint configuration
+⚙️ Tech Stack
+Frontend: React, JavaScript, Bootstrap
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🔧 Installation
+
+Clone Repository
+
+git clone https://github.com/kunaaa123/Game-OX
+
+cd ox-game
+
+Install Dependencies
+
+npm install
+
+Run Application
+
+npm run dev
+
+algorithm
+
+Minimax Algorithm
+
+1. Components
+   React Components: ใช้ React สำหรับ UI และจัดการ State
+   State Management: ใช้ React Hooks (useState, useEffect)
+2. Game Logic
+   AI Logic (minimax): AI เลือกตาที่ดีที่สุดตามระดับความยาก
+   Click Handling: ตรวจสอบช่องว่างและอัปเดต State
+3. User Controls
+   เลือกสัญลักษณ์ (X, O)
+   ปรับขนาดบอร์ด
+   เลือกความยากของ AI
+4. Styling
+   ใช้ CSS และ Bootstrap สำหรับการออกแบบ UI

@@ -1,47 +1,43 @@
-/* ทำให้พื้นหลังเต็มหน้าจอ */
-
 
 .menu-container {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, #ff758c, #ff7eb3);
+    background: linear-gradient(to right, #e8e3e4, #faf2f5);
     background-size: cover;
   }
   
-  /* Card กลางจอ พร้อมเอฟเฟกต์โปร่งแสง */
+
   .menu-card {
     width: 380px;
     padding: 30px;
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.15); /* โปร่งแสง */
-    backdrop-filter: blur(10px); /* เอฟเฟกต์เบลอ */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
     text-align: center;
   }
-  
-  /* หัวข้อ */
+
   .menu-title {
     font-size: 2.2rem;
     font-weight: bold;
-    color: #fff;
+    color: #1f1f1f;
   }
   
-  /* คำอธิบาย */
+ 
   .menu-subtitle {
     font-size: 1rem;
-    color: #f1f1f1;
+    color: #1d1c1c;
     margin-bottom: 20px;
   }
   
-  /* ปุ่ม */
+
   .menu-buttons button {
     transition: all 0.3s ease-in-out;
     border-radius: 10px;
   }
-  
-  /* เอฟเฟกต์ Hover */
+
   .menu-buttons button:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);

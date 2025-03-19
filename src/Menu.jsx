@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Menu.css"; // ใช้ไฟล์ CSS ใหม่
+import "./Menu.css";
 
 const Menu = () => {
   const navigate = useNavigate();
@@ -9,7 +9,7 @@ const Menu = () => {
   return (
     <div className="menu-container">
       <div className="menu-card shadow-lg">
-        <h1 className="menu-title">❌ เกม X O ⭕</h1>
+        <h1 className="menu-title">❌ เกม O X ⭕</h1>
         <p className="menu-subtitle">เลือกโหมดการเล่นของคุณ</p>
         <div className="menu-buttons">
           <button
